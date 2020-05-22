@@ -4,10 +4,10 @@ const router = express.Router()
 
 const pool = mysql.createPool({
     connectionLimit: 10,
-    host: 'localhost',
-    user: 'root',
-    database: 'movies',
-    password: 'bytebio'
+    host: 'ec2-34-198-243-120.compute-1.amazonaws.com',
+    user: 'kxdhivumbtvmle',
+    database: 'dbue2rtdanc1ld',
+    password: '553ffc2be430220c4d36bf99b95532a6af0f825969a9b5dbff41cc05b577457b'
 })
 
 function getConnection() {
