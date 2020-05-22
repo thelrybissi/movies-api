@@ -2,6 +2,18 @@ const express = require('express')
 const mysql = require('mysql')
 const router = express.Router()
 
+const pool = mysql.createPool({
+    connectionLimit: 10,
+    host: 'localhost',
+    user: 'root',
+    database: 'movies',
+    password: 'bytebio'
+})
+
+function getConnection() {
+    return pool
+}
+
 router.post("/movie_create", (req, res) => {
     
     console.log('Trying create new register movie')
@@ -63,14 +75,5 @@ router.get("/movies/:id", (req, res) => {
         res.json(rows)
     })
 })
-
-function getConnection() {
-    return connection = mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        database: 'movies',
-        password: 'bytebio'
-    })
-}
 
 module.exports = router
