@@ -2,12 +2,20 @@ const express = require('express')
 const mysql = require('mysql')
 const router = express.Router()
 
-const pool = mysql.createPool({
+/*const pool = mysql.createPool({
     connectionLimit: 10,
     host: 'us-cdbr-east-06.cleardb.net',
     user: 'b1953cfa42eff9',
     database: 'heroku_090a23a4c17c092',
     password: '0601032e'
+})*/
+
+const pool = mysql.createPool({
+    connectionLimit: 10,
+    host: 'localhost',
+    user: 'root',
+    database: 'movies',
+    password: 'bytebio'
 })
 
 function getConnection() {
@@ -40,7 +48,7 @@ router.post("/movie_create", (req, res) => {
 
 router.get("/", (req, res) => {
     console.log("Responding to root route")
-    res.send("Hello from home page")
+    res.send("Home")
 })
 
 router.get("/movies", (req, res) => {

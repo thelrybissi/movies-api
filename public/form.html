@@ -1,20 +1,38 @@
 <html>
     <head>
     <title>Movies Register</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
-    
     <body>
-        <h1>Cadastro de Filmes</h1>
-        <form action="movie_create" method="POST"> 
-            <label>Movie Title</label>
-            <input type="text" placeholder="Ex: Avengers" name="title"> 
-            <label>Synopsis</label>
-            <input type="text" placeholder="Short description the movies" name="synopsis">
-            <label>Premiere</label>
-            <input type="date" placeholder="Premiere movie" name="premiere">
-            <label>Duration</label>
-            <input type="number" placeholder="Duration in minutes" name="duration">
-            <button type="submit">Register</button>
-        </form>
+        <div class="container-fluid">
+            <div class="row">
+                    <!--First Card - Register Movies -->
+                  <div class="col-4">
+                      <div class="card" style="width: 20rem;">
+                          <img src="https://cdn.onlinewebfonts.com/svg/img_503358.png" class="card-img-top" alt="logo-card-register">
+                          <div class="card-body">
+                              <h5 class="card-title">Register Movie</h5>
+                              <p class="card-text">Please, register your predilect movie</p>
+                              <form class="form-group" action="movie_create" method="POST"> 
+                                  <label>Movie Title</label>
+                                  <input class="form-control" type="text" placeholder="Ex: Avengers" name="title"> 
+                                  <label>Synopsis</label>
+                                  <input class="form-control" type="text" placeholder="Short description the movies" name="synopsis">
+                                  <label>Premiere</label>
+                                  <input class="form-control" type="date" placeholder="Premiere movie" name="premiere">
+                                  <label>Duration</label>
+                                  <input class="form-control" type="number" placeholder="Duration in minutes" name="duration">
+                                  <br>
+                                  <button type="submit" class="btn btn-primary">Register New Movie</button>
+                              </form>
+                          </div>
+                      </div>
+                  </div>               
+            </div>
+        </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
     </body>
 </html>

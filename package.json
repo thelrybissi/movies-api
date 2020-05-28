@@ -4,6 +4,7 @@
   "description": "API para cadastro de filmes",
   "main": "app.js",
   "scripts": {
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +24,7 @@
   "homepage": "https://github.com/github.com/thelrybissi#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.0",
     "express": "^4.17.1",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1"
